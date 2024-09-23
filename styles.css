@@ -22,6 +22,10 @@ body {
     position: relative;
 }
 
+.top-nav .logo{
+    text-decoration: none;
+}
+
 .top-nav .logo h1 {
     color: #fff;
     font-size: 24px;
