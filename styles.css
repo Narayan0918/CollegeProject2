@@ -388,46 +388,73 @@ footer {
     margin-bottom: 20px;
 }
 
+
+
+
+/* Dropdown Menu Styling */
 .category-nav ul {
-    list-style: none;
     display: flex;
-    gap: 15px;
+    flex-direction: row;
+    list-style: none;
     padding-left: 0;
 }
 
-.category-nav a {
+.category-nav ul li{
+    margin: 10px;
+    /* width: 70%; */
+}
+
+.category-nav > ul > li {
+    position: relative;
+}
+
+.dropdown-toggle {
     color: #333;
     text-decoration: none;
     font-size: 18px;
     padding: 8px 16px;
     background-color: #f4f4f4;
     border-radius: 4px;
+    display: block;
     transition: background-color 0.3s ease;
 }
 
-.category-nav a:hover {
+.dropdown-toggle:hover {
     background-color: #ff5733;
     color: #fff;
 }
 
-.games-list {
-    margin-top: 30px;
-}
-
-.games-list h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.games-list ul {
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: -1;
     list-style: none;
-    padding-left: 0;
+    padding: 10px 0;
+    min-width: 200px;
 }
 
-.games-list li {
-    font-size: 18px;
-    margin-bottom: 5px;
+.dropdown-menu li {
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #333;
+    background-color: #ececec;
 }
+
+.dropdown-menu li:hover {
+    background-color: #ff5733;
+    color: #fff;
+}
+
+/* Show dropdown menu on hover */
+.category-nav > ul > li:hover .dropdown-menu {
+    z-index: 1;
+    display: block;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -441,5 +468,17 @@ footer {
 
     .games-list {
         margin-top: 20px;
+    }
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+    }
+
+    .dropdown-menu li {
+        font-size: 18px;
+    }
+    .category-nav > ul > li:hover .dropdown-menu {
+        z-index: 1;
+        display: block;
     }
 }
