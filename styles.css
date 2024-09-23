@@ -329,3 +329,117 @@ footer {
         margin-left: 0;
     }
 }
+
+
+/* ---------------------page2------------------------------ */
+
+/* Games Landing Section */
+.games-landing {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.games-landing h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-item {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: #ff5733;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Games Categories Section */
+.games-categories {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.games-categories h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.category-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-left: 0;
+}
+
+.category-nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.category-nav a:hover {
+    background-color: #ff5733;
+    color: #fff;
+}
+
+.games-list {
+    margin-top: 30px;
+}
+
+.games-list h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.games-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.games-list li {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-nav ul {
+        flex-direction: column;
+    }
+
+    .games-list {
+        margin-top: 20px;
+    }
+}
